@@ -80,14 +80,14 @@ test:
 # URL environment variable explicitly:
 #
 #   production:
-#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
+    # url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  url: <%= ENV["FINAL_CAPSTONE_DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
   database: final_capstone_production
   username: final_capstone
   password: <%= ENV["FINAL_CAPSTONE_DATABASE_PASSWORD"] %>
