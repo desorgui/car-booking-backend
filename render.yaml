@@ -4,7 +4,7 @@ databases:
 services:
   - type: web
     name: rails
-    plan: free
+    # plan: free
     env: ruby
     buildCommand: “./bin/render-build.sh”
     startCommand: bundle exec rails server
@@ -20,3 +20,27 @@ services:
     ipAllowList: []
     plan: free
     maxmemoryPolicy: noeviction
+# databases:
+#   - name: postgres
+#     ipallowlist: []
+#     # databaseName: final_capstone_production
+#     # user: final_capstone
+
+# services:
+#   - type: web
+#     name: rails
+#     env: ruby
+#     buildCommand: "./bin/render-build.sh"
+#     startCommand: bundle exec rails s
+#     envVars:
+#       - key: DATABASE_URL
+#           fromDatabase:
+#           name: postgres
+#           property: connectionString
+#       - key: RAILS_MASTER_KEY
+#         sync: false
+#   - type: redis
+#     name: redis
+#     ipallowlist: []
+#     plan: free
+#     maxmemoryPolicy: noeviction
