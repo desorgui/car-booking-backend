@@ -9,7 +9,7 @@ services:
     startCommand: bundle exec rails s
     envVars:
       - key: DATABASE_URL
-          fromDatabase:
+        fromDatabase:
           name: postgres
           property: connectionString
       - key: RAILS_MASTER_KEY
